@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Todo App</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/fa/css/all.min.css">
+        <link rel="stylesheet" href="~/theme/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="~/theme/assets/css/now-ui-kit.min.css">
+        <link rel="stylesheet" href="~/css/site.css">
+        <link rel='stylesheet' href='~/gallery/source/unitegallery/css/unite-gallery.css' type='text/css' />
+	<link rel='stylesheet' href='~/gallery/source/unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+    </environment>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top bg-success">
+  <div class="container">
+    <a class="navbar-brand" asp-action="Index" asp-controller="Home">Todo App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+          @if(ViewBag.user == null)
+        {
+          <li class="nav-item">
+              <a class="nav-link" asp-action="Login" asp-controller="Home">Login</a>
+           </li>
+          <li class="nav-item">
+              <a class="nav-link" asp-action="Register" asp-controller="Home">Register</a>
+           </li>
+        }
+        else
+        {
+            <li class="nav-item first-name-container">
+                <a href="#" class="nav-link first-name">@ViewBag.user.first_name</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" asp-action="Logout" asp-controller="Home">Logout</a>
+           </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+        @RenderBody()
+        <section id="footer-section" class="fixed-bottom">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <p>&copy; 2018 - Todo App</p>
+                            
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+
+        <script src="~/theme/assets/js/core/jquery.min.js"></script>
+        <script src="~/theme/assets/js/core/bootstrap.min.js"></script>
+        <script src="~/theme/assets/js/core/popper.min.js"></script>
+        <script src="~/theme/assets/js/now-ui-kit.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

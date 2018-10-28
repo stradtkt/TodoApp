@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Todo App";
+}
+
+<div class="row">
+    <div class="card">
+       <div class="col-md-4">
+           <h3 class="text-center">Add Todo</h3>
+           <form asp-action="AddTodo" asp-controller="Home" method="POST">
+               <div class="form-group">
+                   <div class="bg-danger">
+                       <span asp-validation-for="title" class="text-center text-white"></span>
+                   </div>
+                   <br>
+                   <input asp-for="title" class="form-control" placeholder="Todo Title">
+               </div>
+               <div class="form-group">
+                   <div class="bg-danger">
+                       <span asp-validation-for="desc" class="text-center text-white"></span>
+                   </div>
+                   <br>
+                   <textarea asp-for="desc" cols="30" rows="10" class="form-control" placeholder="Description"></textarea>
+               </div>
+           </form>
+       </div> 
+    </div>
+    <div class="card"></div>
+</div>
