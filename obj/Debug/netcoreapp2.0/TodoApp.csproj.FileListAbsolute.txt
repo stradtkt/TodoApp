@@ -1,0 +1,11 @@
+E:\csharp\KevinStradtman\TodoApp\bin\Debug\netcoreapp2.0\TodoApp.deps.json
+E:\csharp\KevinStradtman\TodoApp\bin\Debug\netcoreapp2.0\TodoApp.runtimeconfig.json
+E:\csharp\KevinStradtman\TodoApp\bin\Debug\netcoreapp2.0\TodoApp.runtimeconfig.dev.json
+E:\csharp\KevinStradtman\TodoApp\bin\Debug\netcoreapp2.0\TodoApp.dll
+E:\csharp\KevinStradtman\TodoApp\bin\Debug\netcoreapp2.0\TodoApp.pdb
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.csprojResolveAssemblyReference.cache
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.csproj.CoreCompileInputs.cache
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.AssemblyInfoInputs.cache
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.AssemblyInfo.cs
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.dll
+E:\csharp\KevinStradtman\TodoApp\obj\Debug\netcoreapp2.0\TodoApp.pdb

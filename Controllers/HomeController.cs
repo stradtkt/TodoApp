@@ -26,12 +26,6 @@ namespace TodoApp.Controllers
             }
         }
         [HttpGet("")]
-        public IActionResult Index()
-        {
-            ViewBag.user = ActiveUser;
-            return View();
-        }
-        [HttpGet("register")]
         public IActionResult Register()
         {
             ViewBag.user = ActiveUser;
@@ -116,14 +110,23 @@ namespace TodoApp.Controllers
         [HttpGet("TodoApp")]
         public IActionResult TodoApp() 
         {
+            if(ActiveUser == null) 
+            {
+                return RedirectToAction("Login");
+            }
             List<Todo> todos = _tContext.todos.Include(u => u.User).ToList();
             ViewBag.todos = todos;
+            ViewBag.user = ActiveUser;
             return View();
         }
 
         [HttpGet("DeleteTodo/{todo_id}")]
         public IActionResult DeleteTodo(int todo_id)
         {
+            if(ActiveUser == null)
+            {
+                return RedirectToAction("Login");
+            }
             Todo todo = _tContext.todos.Where(t => t.todo_id == todo_id).SingleOrDefault();
             _tContext.todos.Remove(todo);
             _tContext.SaveChanges();
@@ -160,13 +163,22 @@ namespace TodoApp.Controllers
         [HttpGet("EditTodo/{todo_id}")]
         public IActionResult EditTodo(int todo_id)
         {
+            if(ActiveUser == null)
+            {
+                return RedirectToAction("Login");
+            }
             Todo todo = _tContext.todos.Where(t => t.todo_id == todo_id).SingleOrDefault();
             ViewBag.todo = todo;
+            ViewBag.user = ActiveUser;
             return View();
         }
-        [Route("{todo_id}/ProcessEditTodo")]
+        [HttpPost("EditTodo/{todo_id}/ProcessEditTodo")]
         public IActionResult ProcessEditTodo(int todo_id, string title, string desc, DateTime due_by)
         {
+            if(ActiveUser == null)
+            {
+                return RedirectToAction("Login");
+            }
             Todo todo = _tContext.todos.Where(t => t.todo_id == todo_id).SingleOrDefault();
             todo.title = title;
             todo.desc = desc;

@@ -12741,11 +12741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\csharp\\KevinStradtman\\TodoApp\\TodoApp.csproj",
+      "projectUniqueName": "E:\\csharp\\KevinStradtman\\TodoApp\\TodoApp.csproj",
       "projectName": "TodoApp",
-      "projectPath": "e:\\csharp\\KevinStradtman\\TodoApp\\TodoApp.csproj",
+      "projectPath": "E:\\csharp\\KevinStradtman\\TodoApp\\TodoApp.csproj",
       "packagesPath": "C:\\Users\\strad\\.nuget\\packages\\",
-      "outputPath": "e:\\csharp\\KevinStradtman\\TodoApp\\obj\\",
+      "outputPath": "E:\\csharp\\KevinStradtman\\TodoApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

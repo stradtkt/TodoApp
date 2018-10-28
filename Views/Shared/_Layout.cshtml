@@ -15,7 +15,7 @@
     </environment>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top bg-success">
+<nav class="navbar navbar-expand-lg fixed-top bg-info">
   <div class="container">
     <a class="navbar-brand" asp-action="Index" asp-controller="Home">Todo App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,9 @@
             <li class="nav-item first-name-container">
                 <a href="#" class="nav-link first-name">@ViewBag.user.first_name</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" asp-action="TodoApp" asp-controller="Home">Todos</a>
+           </li>
             <li class="nav-item">
               <a class="nav-link" asp-action="Logout" asp-controller="Home">Logout</a>
            </li>
